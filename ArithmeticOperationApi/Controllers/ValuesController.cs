@@ -16,7 +16,6 @@ namespace ArithmeticOperationApi.Controllers
             _math = math;
         }
 
-        //public Imath math { get; }
 
         [HttpGet]
         [Route("Addition")]
@@ -29,7 +28,7 @@ namespace ArithmeticOperationApi.Controllers
         [HttpGet]
         [Route("Difference")]
         public ActionResult<double> subtraction(double a, double b)
-        {            double result = _math.dif(a, b);
+        {   double result = _math.dif(a, b);
             return result;
         }
 
