@@ -14,7 +14,36 @@ namespace WebAPIArithmeticTest
             _math = new Math();
             _valuesController = new ValuesController(_math);
         }
-       
+
+        [Fact]
+        public void Test_for_addition_from_controllerClass()
+        {
+            var result = _valuesController.additon(5,6);
+
+            Assert.Equal(11, result);
+        }
+        [Fact]
+        public void Test_for_subtraction_from_controllerClass()
+        {
+            var result = _valuesController.subtraction(6, 5);
+
+            Assert.Equal(1, result);
+        }
+        [Fact]
+        public void Test_for_multiplication_from_controllerClass()
+        {
+            var result = _valuesController.multiplication(5, 6);
+
+            Assert.Equal(30, result);
+        }
+        [Fact]
+        public void Test_for_division_from_controllerClass()
+        {
+            var result = _valuesController.division(12, 6);
+
+            Assert.Equal(2, result);
+        }
+
         [Fact]
         public void Test_for_addition()
         {

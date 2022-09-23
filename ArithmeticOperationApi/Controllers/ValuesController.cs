@@ -19,7 +19,7 @@ namespace ArithmeticOperationApi.Controllers
 
         [HttpGet]
         [Route("Addition")]
-        public ActionResult<double> additon(double a, double b)
+        public double additon(double a, double b)
         {
             double result = _math.sum(a, b);
             return result;
@@ -27,14 +27,14 @@ namespace ArithmeticOperationApi.Controllers
 
         [HttpGet]
         [Route("Difference")]
-        public ActionResult<double> subtraction(double a, double b)
+        public double subtraction(double a, double b)
         {   double result = _math.dif(a, b);
             return result;
         }
 
         [HttpGet]
         [Route("Multiplication")]
-        public ActionResult<double> multiplication(double a, double b)
+        public double multiplication(double a, double b)
         {
             double result = _math.mul(a, b);
             return result;
@@ -42,7 +42,7 @@ namespace ArithmeticOperationApi.Controllers
 
         [HttpGet]
         [Route("Division")]
-        public ActionResult<double> division(double a, double b)
+        public double division(double a, double b)
         {
             double result = _math.div(a, b);
             return result;
